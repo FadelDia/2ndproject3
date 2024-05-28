@@ -1,0 +1,20 @@
+# Visualisation des valeurs aberrantes via boxplot
+df.boxplot(figsize=(20,10))
+
+# Appliquer une transformation logarithmique et revisualisation
+df['2022 Population'] = np.log1p(df['2022 Population'])
+df['2020 Population'] = np.log1p(df['2020 Population'])
+df['2015 Population'] = np.log1p(df['2015 Population'])
+df['2010 Population'] = np.log1p(df['2010 Population'])
+df['2000 Population'] = np.log1p(df['2000 Population'])
+df['1990 Population'] = np.log1p(df['1990 Population'])
+
+df['1980 Population'] = np.log1p(df['1980 Population'])
+df['1970 Population'] = np.log1p(df['1970 Population'])
+df['Area (km²)'] = np.log1p(df['Area (km²)'])
+df['Growth Rate'] = np.log1p(df['Growth Rate'])
+
+df['Density (per km²)'] = np.log1p(df['Density (per km²)'])
+df['World Population Percentage'] = np.log1p(df['World Population Percentage'])
+
+df.boxplot(figsize=(20,10))
